@@ -1,10 +1,9 @@
-
 const { Model, DataTypes, } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Workout extends Model { }
 
-Workout.int(
+Workout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -12,7 +11,6 @@ Workout.int(
             primaryKey: true,
             autoIncrement: true,
         },
-
         workout_name: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -20,27 +18,6 @@ Workout.int(
         workout_query: {
             type: DataTypes.STRING,
         },
-        age: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-
-        },
-        gender: {
-            type: DataTypes.STRING,
-            allowNull: false,
-
-        },
-        weight: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-
-        },
-        height: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-
-        },
-
         duration_min: {
             type: DataTypes.INTEGER,
         }
