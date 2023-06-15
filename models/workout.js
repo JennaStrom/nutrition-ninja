@@ -1,4 +1,3 @@
-
 const { Model, DataTypes, } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -12,6 +11,7 @@ Workout.init(
             primaryKey: true,
             autoIncrement: true,
         },
+<<<<<<< HEAD
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -26,15 +26,30 @@ Workout.init(
 
         },
         equipment: {
+=======
+        workout_name: {
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
             type: DataTypes.STRING,
             allowNull: true,
 
         },
+<<<<<<< HEAD
         difficulty: {
+=======
+        workout_query: {
+            type: DataTypes.STRING,
+        },
+        duration_min: {
+            type: DataTypes.INTEGER,
+        }
+        ,
+        nf_calories: {
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
             type: DataTypes.INTEGER,
             allowNull: false,
 
         },
+<<<<<<< HEAD
         instruction: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -47,6 +62,20 @@ Workout.init(
         //     },
 
         // },
+=======
+        met: {
+
+        }
+        ,
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+
+        },
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
     },
     {
         sequelize,
