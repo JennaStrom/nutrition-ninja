@@ -12,11 +12,11 @@ const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
-router.get('/nutrition', (req, res) => {
-  res.render('nutritionForm');
+router.get('/', (req, res) => {
+  res.render('nutritionResults');
 });
 
-router.post('/nutrition', (req, res) => {
+router.post('/', (req, res) => {
   try {
     const { food } = req.body;
 
@@ -25,7 +25,7 @@ router.post('/nutrition', (req, res) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': '!!!API KEY!!!',
+        'Authorization': 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO',
       },
     };
 
