@@ -2,12 +2,17 @@ const router = require('express').Router();
 const { User, Workout, Nutrition } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/signUp', (req, res) => {
+router.get('/', (req, res) => {
+	res.render('homepage')
+  
+  });
+
+router.get('/signup', (req, res) => {
 	if (req.session.logged_in) {
 		res.redirect('/'); 
 		return;
 	}
-	res.render('signUp');
+	res.render('signup');
 });
 
 router.get('/login', (req, res) => {
