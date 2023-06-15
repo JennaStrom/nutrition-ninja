@@ -19,7 +19,7 @@ router.get('/login', (req, res) => {
 	res.render('login');
 });
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
 	try {
 		const userData = await User.findByPk(req.session.user_id, {
 			attributes: {
@@ -34,7 +34,7 @@ router.get('/', withAuth, async (req, res) => {
 			plain: true
 		});
 
-		res.render('home', {
+		res.render('', {
 			...user,
 			logged_in: true
 		});
