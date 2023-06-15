@@ -1,12 +1,17 @@
 const express = require('express');
+const path = require('path')
+// const fetch = require('node-fetch')
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
 const session = require('express-session');
+const exphps = require('express-handlebars')
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const app = express();
-
+const PORT = process.env.PORT || 3001;
+console.log(PORT)
+console.log(app)
 const sess = {
     secret: 'Super sign',
     cookie: {},
@@ -17,16 +22,30 @@ const sess = {
     })
   };
 
-  app.use(session(sess));
 
+
+
+  app.use(session(sess));
+const hbs = exphps.create()
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')))
+
+
+
 
 app.use(routes);
+// app.get('/', async (req, res)=>{
+//   return res.json('noooooo')
+// })
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log('Now listening'));
+// });
 
-
+app.listen(PORT, () => {
+  sequelize.sync({ force: false })
+  console.log('Now listening')})
 

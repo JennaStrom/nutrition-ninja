@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class Workout extends Model { }
 
-Workout.int(
+Workout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -12,56 +12,41 @@ Workout.int(
             primaryKey: true,
             autoIncrement: true,
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        type: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        muscle: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
 
-        workout_name: {
+        },
+        equipment: {
             type: DataTypes.STRING,
             allowNull: true,
+
         },
-        workout_query: {
-            type: DataTypes.STRING,
-        },
-        age: {
+        difficulty: {
             type: DataTypes.INTEGER,
             allowNull: false,
 
         },
-        gender: {
-            type: DataTypes.STRING,
-            allowNull: false,
-
-        },
-        weight: {
+        instruction: {
             type: DataTypes.INTEGER,
             allowNull: false,
-
         },
-        height: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'user',
+        //         key: 'id',
+        //     },
 
-        },
-
-        duration_min: {
-            type: DataTypes.INTEGER,
-        }
-        ,
-        nf_calories: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-
-        },
-        met: {
-
-        }
-        ,
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
-
-        },
+        // },
     },
     {
         sequelize,
