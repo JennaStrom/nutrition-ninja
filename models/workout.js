@@ -11,10 +11,31 @@ Workout.init(
             primaryKey: true,
             autoIncrement: true,
         },
+<<<<<<< HEAD
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        type: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        muscle: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+
+        },
+        equipment: {
+=======
         workout_name: {
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
             type: DataTypes.STRING,
             allowNull: true,
+
         },
+<<<<<<< HEAD
+        difficulty: {
+=======
         workout_query: {
             type: DataTypes.STRING,
         },
@@ -23,10 +44,25 @@ Workout.init(
         }
         ,
         nf_calories: {
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
             type: DataTypes.INTEGER,
             allowNull: false,
 
         },
+<<<<<<< HEAD
+        instruction: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'user',
+        //         key: 'id',
+        //     },
+
+        // },
+=======
         met: {
 
         }
@@ -39,6 +75,7 @@ Workout.init(
             },
 
         },
+>>>>>>> d0de8c20bea2446821d4314cb1fa6a8b19fab568
     },
     {
         sequelize,

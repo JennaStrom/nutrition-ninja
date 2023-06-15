@@ -1,8 +1,40 @@
+{{!-- <div>
+  <button id="startButton">Get Started</button>
+</div> --}}
 
-    <form id="workoutForm">
-        <label for="workoutDescription">Workout Description/query:</label>
-        <input type="text" id="workoutDescription" name="workout_description" required>
-      
-        <button id="submitButton" type="submit">Submit</button>
-      </form>
-    
+<div id="workoutFormContainer">
+<form id="workoutForm" action="">
+    <label for="exercise">Choose :</label>
+    <select id="selectionType" name="typeAndMuscle">
+      <option value="">by exercise type</option>
+      <select name="" id="type">
+        <option value="">Cardio</option>
+        <option value="">Strength</option>
+        <option value="">Stretching</option>
+        <option value="">Strongman</option>
+        <option value="">Powerlifting</option>
+        <option value="">olympic_weightlifting</option>
+        <option value="">plyometrics</option>
+        <option value="">Cardio</option>
+      </select>
+      <option value="">by targeted muscle</option>
+      <select name="" id="muscle">
+        <option value="">Chest</option>
+        <option value="">Abdmonials</option>
+        <option value="">Abductors</option>
+      </select>
+    </select>
+
+<label for="">Choose difficulty level</label>
+    <select name="" id="difficultyLevel">
+<option value="">beginner</option>
+<option value="">intermediate</option>
+<option value="">expert</option>
+    </select>
+ <label for="weight">Name of exercise (optional):</label>
+  <input type="number" id="weight" name="weight" placeholder="e.g. push up">
+
+ <button id="submitButton" type="submit">Submit</button>
+  </form>
+</div>
+  

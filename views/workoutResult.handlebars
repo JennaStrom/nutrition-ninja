@@ -1,13 +1,17 @@
 {{!--  --}}
 <div>
-    <p>Age:{{age}}</p>
-    <p>{{weight}}</p>
-    <p>{{gender}}</p>
-    <p>{{height}}</p>
-    <p>{{met}}</p>
-    <p>{{nf_calories}}</p>
-    <p>{{duration_min}}</p>
-  
+    {{#each extractedData}}
+    <p>Name: {{this.name}}</p>
+    <p>Type: {{this.type}}</p>
+    <p>Muscle: {{this.muscle}}</p>
+    <p>Equipment: {{this.equipment}}</p>
+    <p>Difficulty: {{this.difficulty}}</p>
+    <p>Instructions: {{this.instructions}}</p>
+    {{/each}}
+</div>
+
+<div>
+    <a href="/controllers/api/caloriesRoute.js" id="caloriesLink">Click here to know calories expended</a>
 </div>
 
 {{!-- chart script shows here --}}
