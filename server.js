@@ -14,19 +14,19 @@ const PORT = process.env.PORT || 3001;
 console.log(PORT)
 console.log(app)
 const sess = {
-    secret: 'Super sign',
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: sequelize
-    })
-  };
+  secret: 'Super sign',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 
 
 
-  app.use(session(sess));
+app.use(session(sess));
 const hbs = exphps.create()
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -48,5 +48,6 @@ app.use(routes);
 
 app.listen(PORT, () => {
   sequelize.sync({ force: false })
-  console.log('Now listening')})
+  console.log('Now listening')
+})
 

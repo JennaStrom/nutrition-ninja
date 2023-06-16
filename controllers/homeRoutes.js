@@ -4,12 +4,12 @@ const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
 	res.render('homepage')
-  
-  });
+
+});
 
 router.get('/signup', (req, res) => {
 	if (req.session.logged_in) {
-		res.redirect('/'); 
+		res.redirect('/');
 		return;
 	}
 	res.render('signup');
@@ -23,7 +23,7 @@ router.get('/login', (req, res) => {
 
 	res.render('login');
 });
-
+//change to /profile? Where are we sending them after they login
 router.get('/dashboard', withAuth, async (req, res) => {
 	try {
 		const userData = await User.findByPk(req.session.user_id, {

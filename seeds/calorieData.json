@@ -1,0 +1,9 @@
+[
+    {
+        "workout_description": "running",
+        "nf_calories": 300,
+        // not sure what this number should read
+        "met": 45
+    }
+
+]
