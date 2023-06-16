@@ -8,7 +8,7 @@ const loginRoute = require('./loginRoute');
 router.use('/signup', userRoutes);
 router.use('/login', loginRoute);
 router.use('/workouts', workoutRoutes);
-router.use('/nutriton', nutritionRoutes);
+router.use('/nutrition', nutritionRoutes);
 router.use('/calories', caloriesRoutes);
 
 

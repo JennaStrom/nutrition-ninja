@@ -1,14 +1,11 @@
 [
     {
-        "workout_name": "running",
-        "workout_query": "I ran 3 miles",
-        "age": 27,
-        "gender": "male",
-        "weight":62,
-        "height": 177,
-        "met": "9.8",
-        "duration_min": 30.02,
-        "nf_calories": 304
+        "name": "running",
+        "type": "cardio",
+        "muscle": null,
+        "equipment": null,
+        "difficulty":"expert",
+        "instructions": null
         
     }
 
