@@ -1,4 +1,5 @@
 const express = require('express');
+const axios = require('axios');
 const path = require('path')
 // const fetch = require('node-fetch')
 const sequelize = require('./config/connection');

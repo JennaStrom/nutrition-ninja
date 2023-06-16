@@ -1,78 +1,74 @@
 
-
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
 const Workout = require('../../models/workout');
-// const apiEndpoint = 'https://trackapi.nutritionix.com/v2/natural/exercise'
-// const apiWorkoutKey = 'b390e29a58c8183e487d273f4488f5ef—'
-// const appId = '85d6555d'
+const axios = require('axios');
 
+const apiEndpoint = 'https://api.api-ninjas.com/v1/exercises';
+const apinewNinja = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO';
 
-
+// GET route to render the workout form
 router.get('/', (req, res) => {
-    // console.log('hi')
-    // return res.json()
-    res.render('workoutForm')
-})
+  res.render('workoutForm');
+});
 
+// GET route to handle form submission and retrieve workout data from the third-party API
 router.post('/', async (req, res) => {
-    const { body } = req;
+  const { body } = req;
 
-    const apiEndpoint = 'https://api.api-ninjas.com/v1/exercises'
-    const apinewNinja = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO'
+  const requestParams = {
+    headers: {
+      'X-Api-Key': apinewNinja,
+    },
+    params: {
+      muscle: body.muscle,
+      // type: body.type,
+      // name: body.name,
+      difficulty: body.difficulty,
+    },
+  };
 
-    const requestParams = {
-        method: "POST",
-        headers: {
+  try {
+    const response = await axios.get(apiEndpoint, requestParams);
+    const data = response.data;
 
-            "x-app-key": apinewNinja,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            muscle: body.muscle,
-            type: body.type,
-            name: body.name,
-            difficulty: body.difficulty,
-        })
+    const extractedData = [];
+    // let extractedResult
+    for (let i = 0; i < 2 && i < data.length; i++) {
+     let extractedResult = {
+        name: data[i].name,
+        type: data[i].type,
+        muscle: data[i].muscle,
+        equipment: data[i].equipment,
+        difficulty: data[i].difficulty,
+        instructions: data[i].instructions,
+      };
+  
+      extractedData.push(extractedResult);
     }
-    try {
-        const response = await fetch(apiEndpoint, requestParams)
-        const data = await response.json()
-
-        const extractedData =[]
-
-        for (let i = 0; i < 2 && i<data.length; i++) {
-
-const extractedResult = {
-            name: data[i].name,
-            type: data[i].type,
-            muscle: data[i].muscle,
-            equipment: data[i].equipment,
-            difficulty: data[i].difficulty,
-            instructions: data[i].instructions
-        }
-      extractedData.push(extractedResult)
-
-        }
-
-        const userWorkoutData = await Workout.create({ ...req.body, ...extractedData }) //do we need to list all data including the additional calories_burnt
-
-
-        if (userWorkoutData) {
-            //  res.status(200).json(userWorkoutData)
-            // res.redirect('/dashboard')
-            res.render('workoutResult', {userWorkoutData})
-        }
-        res.status(400).json({ 'Error': err })
-
+// console.log(extractedResult)
+    const userWorkoutData = await Workout.bulkCreate(extractedData);
+console.log(userWorkoutData)
+    if (userWorkoutData) {
+      res.json(extractedData[0]);
+    } else {
+      res.status(400).json({ error: 'No workout data found' });
     }
-    catch (error) {
-        res.status(500).json({ 'Error': error })
-    }
-})
-
-
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 module.exports = router;
+
+
+
+
+
+
+
+
 
 
 
