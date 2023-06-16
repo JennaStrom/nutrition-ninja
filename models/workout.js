@@ -21,7 +21,7 @@ Workout.init(
         },
         muscle: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
         },
         equipment: {

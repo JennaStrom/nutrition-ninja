@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
   try {
     const { food } = req.body;
 
-    const url = `https://api.api-ninja.com/v1/nutrition?food=${food}`;
+    const url = `https://api.api-ninja.com/v1/nutrition?query=${food}`;
     const options = {
       method: 'GET',
       headers: {
