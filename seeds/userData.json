@@ -1,0 +1,12 @@
+[
+    {
+        "username": "healthyBob",
+        "password": "password",
+        "age": 45,
+        "gender": "Male",
+        "weight": 185,
+        "height": "6'5"
+        
+    }
+
+]
