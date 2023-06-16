@@ -1,17 +1,64 @@
-{{!--  --}}
-<div>
-    {{#each extractedData}}
-    <p>Name: {{this.name}}</p>
-    <p>Type: {{this.type}}</p>
-    <p>Muscle: {{this.muscle}}</p>
-    <p>Equipment: {{this.equipment}}</p>
-    <p>Difficulty: {{this.difficulty}}</p>
-    <p>Instructions: {{this.instructions}}</p>
-    {{/each}}
-</div>
 
+
+
+<div id="workoutResultContainer">
+
+
+  {{#each extractedData}}
+  <p>Name: {{name}}</p>
+  <p>Type: {{type}}</p>
+  <p>Muscle: {{muscle}}</p>
+  <p>Equipment: {{equipment}}</p>
+  <p>Difficulty: {{difficulty}}</p>
+  <p>Instructions: {{instructions}}</p>
+  {{/each}}
+</div> 
+
+
+{{!-- 
 <div>
     <a href="/controllers/api/caloriesRoute.js" id="caloriesLink">Click here to know calories expended</a>
-</div>
+</div>  --}}
+{{!-- 
 
-{{!-- chart script shows here --}}
+<div id="workoutResultContainer">
+ <canvas id="workoutChart"></canvas>
+
+  {{#each userWorkoutData}}
+  <p>Name: {{name}}</p>
+  <p>Type: {{type}}</p>
+  <p>Muscle: {{muscle}}</p>
+  <p>Equipment: {{equipment}}</p>
+  <p>Difficulty: {{difficulty}}</p>
+  <p>Instructions: {{instructions}}</p>
+  {{/each}}
+</div> --}}
+{{!-- 
+
+<div id="workoutResultContainer">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Muscle</th>
+        <th>Equipment</th>
+        <th>Difficulty</th>
+        <th>Instructions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each userWorkoutData}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{type}}</td>
+        <td>{{muscle}}</td>
+        <td>{{equipment}}</td>
+        <td>{{difficulty}}</td>
+        <td>{{instructions}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  
+</div> --}}

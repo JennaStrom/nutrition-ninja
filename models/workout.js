@@ -20,7 +20,7 @@ Workout.init(
             allowNull: false,
         },
         muscle: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
 
         },
@@ -30,13 +30,13 @@ Workout.init(
 
         },
         difficulty: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
 
         },
-        instruction: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+        instructions: {
+            type: DataTypes.TEXT,
+            allowNull: true,
         },
         // user_id: {
         //     type: DataTypes.INTEGER,
