@@ -14,7 +14,7 @@ Calories.init(
         },
     
         workout_description: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
 
         },
