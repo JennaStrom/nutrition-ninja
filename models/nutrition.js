@@ -11,25 +11,25 @@ Nutrition.init(
             primaryKey: true,
             autoIncrement: true
         },
-        food: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
         },
         calories: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         protein: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         carbs: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         fat: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         }
     },
     {

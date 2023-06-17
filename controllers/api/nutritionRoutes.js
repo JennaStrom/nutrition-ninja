@@ -1,48 +1,108 @@
-// const foodAll = () =>
-//   fetch('/foods', {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-
 const express = require('express');
 const router = express.Router();
+const Nutrition = require('../../models/nutrition');
+const axios = require('axios');
 
-router.use(express.urlencoded({ extended: true }));
-router.use(express.json());
+const apiEndpoint2 = 'https://api.api-ninjas.com/v1/nutrition';
+const apinewNinja2 = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO'
 
 router.get('/', (req, res) => {
-  res.render('nutritionResults');
+  res.render('nutritionForm');
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
+  const {body} = req;
+
+  const requestParams2 = {
+    headers: {
+      'X-Api_key': apinewNinja2,
+    },
+    params: {
+      name: body.name
+    },
+  }
+
   try {
-    const { food } = req.body;
+    const response = await axios.get(apiEndpoint2, requestParams2);
+    const data2 = response.data;
 
-    const url = `https://api.api-ninja.com/v1/nutrition?query=${food}`;
-    const options = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO',
-      },
-    };
+    const extractedData2 = data2;
 
-    fetch(url, options)
-      .then((apiResponse) => apiResponse.json())
-      .then((data) => {
-        const { calories, protein, carbs, fat } = data;
-        res.render('nutritionResults', { food, calories, protein, carbs, fat });
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).send('Server Error');
-      });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
+    const userNutritionData = await Nutrition.bulkCreate(extractedData2);
+    console.log(userNutritionData);
+
+    if (userNutritionData) {
+      res.json(extractedData2[0]);
+    } else {
+      res.status(400).json({ error: 'No nutrition data found' });
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
+  
+  module.exports = router;
+  //   try {
+  //     const response = await axios.get(apiEndpoint2, requestParams2);
+  //     const data2 = response.data;
+  
+  //     const extractedData2 = [];
+  //     // let extractedResult
+  //     for (let i = 0; i < 2 && i < data.length; i++) {
+  //      let extractedResult2 = {
+  //         name: data2[i].name,
+  //         calories: data2[i].calories,
+  //         protein: data2[i].protein_g,
+  //         carbs: data2[i].carbohydrates_total_g,
+  //         fat: data2[i].fat_total_g,
+  //       };
+    
+  //       extractedData2.push(extractedResult2);
+  //     }
+  // // console.log(extractedResult)
+  //     const userNutritionData = await Nutrition.bulkCreate(extractedData2);
+  // console.log(userNutritionData)
+  //     if (userNutritionData) {
+  //       res.json(extractedData2[0]);
+  //     } else {
+  //       res.status(400).json({ error: 'No nutrition data found' });
+  //     }
+  //   } catch (error) {
+  //     console.log(error)
+  //     res.status(500).json({ error: 'Internal server error' });
+  //   }
+  // });
 
-module.exports = router;
+
+
+  
+
+// router.post('/', (req, res) => {
+//   try {
+//     const { food } = req.body;
+
+//     const url = `https://api.api-ninja.com/v1/nutrition?query=${food}`;
+//     const options = {
+//       method: 'GET',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'X-Api-Key': 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO',
+//       },
+//     };
+
+//     fetch(url, options)
+//       .then((apiResponse) => apiResponse.json())
+//       .then((data) => {
+//         const { calories, protein, carbs, fat } = data;
+//         res.render('nutritionResults', { food, calories, protein, carbs, fat });
+//       })
+//       .catch((err) => {
+//         console.error(err);
+//         res.status(500).send('Server Error');
+//       });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send('Server Error');
+//   }
+// });
