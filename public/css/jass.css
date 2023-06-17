@@ -7,10 +7,27 @@ html {
   body {
     margin: 2%;
   }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: greenyellow;
+    line-height: 3vh;
+}
+nav{
+  display: flex;
+  justify-content: flex-end;
+}
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
   }
+  footer {
+    background-color: greenyellow;
+
+  }
   #workoutFormContainer {
 border: solid;
   }
+  
