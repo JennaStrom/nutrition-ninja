@@ -1,12 +1,22 @@
 <section>
     <p id="">
         Step up your health game with Nutrition Ninja! Find out how many calories your workout burned and make sure you
-        are getting the nutrients you need all in one convenient place!
+        are getting the nutrients you need all in one convenient place. Sign up or Log in to get started today!
     </p>
     <div>
-        <button id="login-button" class="btn">Login!</button>
+        <button id="login-button" class="btn" type="submit" onclick="login()">Login!</button>
     </div>
     <div>
-        <button id="signup-button" class="btn">Signup!</button>
+        <button id="signup-button" class="btn" type="submit" onclick="signup()">Signup!</button>
     </div>
 </section>
+<script>
+    function login() {
+        document.location.replace('/login');
+    }
+</script>
+<script>
+    function signup() {
+        document.location.replace('/signup');
+    }
+</script>

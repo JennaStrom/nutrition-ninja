@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrition Ninja</title>
-    <link rel="stylesheet" href="/css/jass.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Ninja</title>
+  <link rel="stylesheet" href="/css/jass.css">
 </head>
+
 <body>
 
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>WORKOUT...............</h1>
-      </header>
+  <header class="display-flex justify-space-between align-center p-2">
+    <h1>Nutrition Ninja</h1>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/api/nutrition">Nutrition</a></li>
+        <li><a href="/api/workouts">Workouts</a></li>
+        <li><a href="">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
   <div>
-    <div>
+    {{!-- <div>
       <button id="startButton" class="btn">Get Started</button>
-    </div>
-  
-  <main class="container container-fluid mt-5">
-{{{body}}}
-  </main>
-</div>
+    </div> --}}
 
-<footer>
-  <h1>
-    This is footer
-  </h1>
-</footer>
-         
- 
-    
-    
+    <main class="container container-fluid mt-5">
+      {{{body}}}
+    </main>
+  </div>
+
+  <footer>
+    <h1>
+      This is footer
+    </h1>
+  </footer>
+
+
+
+
 </body>
+
 </html>
