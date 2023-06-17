@@ -43,7 +43,7 @@ User.init(
 
         },
         height: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
 
         },
