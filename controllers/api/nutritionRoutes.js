@@ -3,8 +3,8 @@ const router = express.Router();
 const Nutrition = require('../../models/nutrition');
 const axios = require('axios');
 
-const apiEndpoint2 = 'https://api.api-ninjas.com/v1/nutrition';
-const apinewNinja2 = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO'
+const apiEndpoint2 = 'https://api.api-ninjas.com/v1/nutrition?query=';
+const apinewNinja2 = 'y0Xv/ascWow8jE7ZEojqeA==db1pQsgjws8x78bK'
 
 router.get('/', (req, res) => {
   res.render('nutritionForm');
