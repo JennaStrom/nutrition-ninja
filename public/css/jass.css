@@ -11,6 +11,10 @@ html {
     font-size: 2em;
     margin: 0.67em 0;
   }
-  #workoutFormContainer {
+  /* #workoutFormContainer {
 border: solid;
+  } */
+  #each_div {
+    border: solid;
+    margin: 1%;
   }
