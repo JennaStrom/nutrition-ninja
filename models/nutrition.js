@@ -16,20 +16,23 @@ Nutrition.init(
             allowNull: false
         },
         calories: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: true
         },
         protein: {
-            type: DataTypes.INTEGER,
-            allowNull: true
+            type: DataTypes.FLOAT,
+            allowNull: true,
+            field: 'protein_g'
         },
         carbs: {
-            type: DataTypes.INTEGER,
-            allowNull: true
+            type: DataTypes.FLOAT,
+            allowNull: true,
+            field: 'carbohydrates_total_g'
         },
         fat: {
-            type: DataTypes.INTEGER,
-            allowNull: true
+            type: DataTypes.FLOAT,
+            allowNull: true,
+            field: 'fat_total_g'
         }
     },
     {

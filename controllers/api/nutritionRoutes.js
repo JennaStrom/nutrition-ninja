@@ -11,20 +11,28 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const {body} = req;
+  const { body } = req;
 
+  // console.log(body);
+  const query = body.name;
   const requestParams2 = {
     headers: {
-      'X-Api_key': apinewNinja2,
+      'X-Api-key': apinewNinja2,
     },
-    params: {
-      name: body.name
-    },
-  }
+    // params: {
+    //   name: body.name,
+    // },
+  };
 
   try {
-    const response = await axios.get(apiEndpoint2, requestParams2);
+    console.log(requestParams2);
+    const response = await axios.get(
+      `https://api.api-ninjas.com/v1/nutrition?query=${query}`,
+      requestParams2
+    );
     const data2 = response.data;
+
+    console.log({ data2 });
 
     const extractedData2 = data2;
 
@@ -37,7 +45,7 @@ router.post('/', async (req, res) => {
       res.status(400).json({ error: 'No nutrition data found' });
     }
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
