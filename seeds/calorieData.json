@@ -2,7 +2,11 @@
     {
         "workout_description": "running",
         "nf_calories": 300,
-        "met": 45
+        "met": 9.8,
+        "age": 45,
+        "gender": "Male",
+        "weight": 185,
+        "height": "6'5"
     }
 
 ]

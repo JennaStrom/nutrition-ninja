@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Workout, Nutrition } = require('../models');
 
+
 router.get('/', (req, res) => {
     res.render('login')
 });
@@ -40,3 +41,5 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+
+

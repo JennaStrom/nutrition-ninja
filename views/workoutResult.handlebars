@@ -1,64 +1,19 @@
 
 
+ 
 
-<div id="workoutResultContainer">
+<div id="workoutResultContainer" class="container is-fluid">
 
 
-  {{#each extractedData}}
-  <p>Name: {{name}}</p>
-  <p>Type: {{type}}</p>
-  <p>Muscle: {{muscle}}</p>
-  <p>Equipment: {{equipment}}</p>
-  <p>Difficulty: {{difficulty}}</p>
-  <p>Instructions: {{instructions}}</p>
+  {{#each workoutData as |data| }}
+  <p>Name: {{data.name}}</p>
+  <p>Type: {{data.type}}</p>
+  <p>Muscle: {{data.muscle}}</p>
+  <p>Equipment: {{data.equipment}}</p>
+  <p>Difficulty: {{data.difficulty}}</p>
+  <p>Instructions: {{data.instructions}}</p>
   {{/each}}
 </div> 
 
 
-{{!-- 
-<div>
-    <a href="/controllers/api/caloriesRoute.js" id="caloriesLink">Click here to know calories expended</a>
-</div>  --}}
-{{!-- 
-
-<div id="workoutResultContainer">
- <canvas id="workoutChart"></canvas>
-
-  {{#each userWorkoutData}}
-  <p>Name: {{name}}</p>
-  <p>Type: {{type}}</p>
-  <p>Muscle: {{muscle}}</p>
-  <p>Equipment: {{equipment}}</p>
-  <p>Difficulty: {{difficulty}}</p>
-  <p>Instructions: {{instructions}}</p>
-  {{/each}}
-</div> --}}
-{{!-- 
-
-<div id="workoutResultContainer">
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Muscle</th>
-        <th>Equipment</th>
-        <th>Difficulty</th>
-        <th>Instructions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each userWorkoutData}}
-      <tr>
-        <td>{{name}}</td>
-        <td>{{type}}</td>
-        <td>{{muscle}}</td>
-        <td>{{equipment}}</td>
-        <td>{{difficulty}}</td>
-        <td>{{instructions}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-  
-</div> --}}
+    <script src="/js/workout.js"></script> 
