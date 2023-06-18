@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
 });
 router.post('/', async (req, res) => {
   const {body} = req;
+  const { body } = req;
+
+  // console.log(body);
+  const query = body.name;
   const requestParams2 = {
     headers: {
       'X-Api-key': apinewNinja2,
@@ -21,6 +25,21 @@ router.post('/', async (req, res) => {
     const response = await axios.get(apiEndpoint2, requestParams2);
     console.log('response', response.data)
     const data2 = response.data;
+    // params: {
+    //   name: body.name,
+    // },
+  };
+
+  try {
+    console.log(requestParams2);
+    const response = await axios.get(
+      `https://api.api-ninjas.com/v1/nutrition?query=${query}`,
+      requestParams2
+    );
+    const data2 = response.data;
+
+    console.log({ data2 });
+
     const extractedData2 = data2;
     const userNutritionData = await Nutrition.bulkCreate(extractedData2);
     console.log(userNutritionData);
@@ -31,6 +50,7 @@ router.post('/', async (req, res) => {
     }
   } catch (error) {
     // console.log(error)
+    console.log(error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
