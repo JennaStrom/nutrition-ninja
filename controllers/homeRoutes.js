@@ -30,20 +30,21 @@ router.get('/profile', withAuth, async (req, res) => {
 			attributes: {
 				exclude: ['password']
 			},
-			include: [{
-				model: { User, Workout, Nutrition, Calories }
-			}],
+			// include: [{
+			// 	model: { User }
+			// }],
 		});
 
 		const user = userData.get({
 			plain: true
 		});
-
-		res.render('/profile', {
-			...user,
+console.log("user", user)
+		res.render('profile', {
+			user,
 			logged_in: true
 		});
 	} catch (err) {
+		console.log('==error:', err)
 		res.status(500).json(err);
 	}
 });

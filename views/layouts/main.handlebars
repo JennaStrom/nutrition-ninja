@@ -5,20 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrition Ninja</title>
+  <link rel="stylesheet" href="/css/mystyle.scss" type="css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
 
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>Nutrition Ninja</h1>
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/api/nutrition">Nutrition</a></li>
-        <li><a href="/api/workouts">Workouts</a></li>
-        <li><a href="">Profile</a></li>
+  <header class="display-flex justify-space-between align-center p-2 navbar">
+    <h1 class="navbar-brand">Nutrition Ninja</h1>
+    <nav class="navbar-menu is-active navbar-end">
+      <ul class="columns">
+        <li><a class="navbar-item column" href="/">Home</a></li>
+        <li><a class="navbar-item column" href="/api/nutrition">Nutrition</a></li>
+        <li><a class="navbar-item column" href="/api/workouts">Workouts</a></li>
+        <li><a class="navbar-item column" href="">Profile</a></li>
+        {{#if logged_in}}
+        <li><a class="navbar-item column" href="/logout">Logout</a></li>
+         {{/if}}
       </ul>
     </nav>
   </header>
