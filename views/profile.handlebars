@@ -1,6 +1,8 @@
 <h1>Welcome, {{user.username}}!</h1>
 
-<a href="/calories">Calories</a>
-<a href="/workout">Workout</a>
-<a href="/nutrition">Nutrition</a>
-<a href="/profile">Profile</a>
+<div class="columns">
+{{!-- <a class="column is-full" href="/calories">Calories</a> --}}
+<a class="column is-half is-vcentered" href="/api/workouts">Workouts</a>
+<a class="column is-half is-vcentered" href="/api/nutrition">Nutrition</a>
+{{!-- <a class="column is-full" href="/profile">Profile</a> --}}
+</div>
