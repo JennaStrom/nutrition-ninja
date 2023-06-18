@@ -1,6 +1,6 @@
 [
     {
-        "food": "chicken",
+        "name": "chicken",
         "calories": 100,
         "protein": 20,
         "carbs": 15,
