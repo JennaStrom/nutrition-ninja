@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok) {
         retrievedData = await response.json();
         indexNow = 0;
-        renderWorkoutResult();
+        renderWorkoutResult(retrievedData);
       } else {
         throw new Error('Network error.');
       }
@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
 
       workoutResultContainer.innerHTML += template;
+    
+
     }
 
     if (lastIndex < retrievedData.length) {

@@ -36,15 +36,16 @@ const appId = '85d6555d'
              
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
+params:
+            {
                 // age: userData.age,
                 // gender: userData.gender,
                 // weight: userData.weight,
                 // height: userData.height,
-               workout_description,
-            //    duration_min,
+               workout: workout_description,
+               duration_minuration_min,
 
-            })
+            }
         }
         
         const response = await fetch(apiEndpoint, requestParams)
