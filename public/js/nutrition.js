@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>Fat: ${data.fat_total_g}</p>
             `;
           
-            document.getElementById('nutritionResultContainer').innerHTML += template;
+            document.getElementById('nutritionResultsContainer').innerHTML += template;
           };
     });
 
