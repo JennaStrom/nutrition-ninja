@@ -1,15 +1,17 @@
 
 
-<div >
+<div id="caloriesFormContainer">
 
-<form action="/calories" method="POST">
+<form id="caloriesForm">
   <label for="workoutDescription">Workout Description:</label>
-  <input type="text" id="workoutDescription" name="workout_description" required>
+  <input type="text" id="workoutDescription" name="workout_description">
 
   <label for="durationInMin">Duration (in minutes):</label>
-  <input type="number" id="durationInMin" name="duration_min" required>
+  <input type="number" id="durationInMin" name="duration_min">
 
-  <button id="caloriesLink" type="submit">Calculate Calories</button>
+  <button id="caloriesButton" type="submit">Calculate Calories</button>
 </form>
 
 </div>
+
+<script src="/js/calories.js"></script>

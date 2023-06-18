@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
   res.render('workoutForm');
 });
 
+
 // GET route to handle form submission and retrieve workout data from the third-party API
 router.post('/', async (req, res) => {
   const { body } = req;
@@ -32,10 +33,11 @@ router.post('/', async (req, res) => {
     const response = await axios.get(apiEndpoint, requestParams);
     const data = response.data;
 
-    const extractedData = [];
+    let extractedData = [];
     // let extractedResult
-    for (let i = 0; i < 2 && i < data.length; i++) {
-     let extractedResult = {
+    for (let i = 0; i < data.length; i++) {
+      
+    let  extractedResult = {
         name: data[i].name,
         type: data[i].type,
         muscle: data[i].muscle,
@@ -49,8 +51,10 @@ router.post('/', async (req, res) => {
 // console.log(extractedResult)
     const userWorkoutData = await Workout.bulkCreate(extractedData);
 console.log(userWorkoutData)
+
     if (userWorkoutData) {
-      res.json(extractedData[0]);
+      
+      res.status(200).json(userWorkoutData)
     } else {
       res.status(400).json({ error: 'No workout data found' });
     }

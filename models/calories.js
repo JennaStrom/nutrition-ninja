@@ -12,6 +12,11 @@ Calories.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+
+        },
     
         workout_description: {
             type: DataTypes.STRING,
@@ -25,6 +30,11 @@ Calories.init(
         met: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        duration_min: {
+type: DataTypes.INTEGER,
+allowNull: true,
+
         },
         // user_id: {
         //     type: DataTypes.INTEGER,
