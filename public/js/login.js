@@ -14,8 +14,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to what page? profile?
-      document.location.replace('/');
+      document.location.replace('/profile');
     } else {
       alert(response.statusText);
     }
