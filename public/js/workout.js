@@ -2,30 +2,22 @@
 // https://share.balsamiq.com/c/4CSS9Qs6W1Bg4ZZLaoDwwm.png
 
 
-// const apiNutritionIx = 'b390e29a58c8183e487d273f4488f5ef'
-// const appId = '85d6555d'
-
-// const apinewNinja = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO'
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-const formContainer = document.getElementById('workoutFormContainer')
- formContainer.style.display = 'none'
+  const formContainer = document.getElementById('workoutFormContainer')
+  formContainer.style.display = 'none'
 
 
- const starterBtn = document.getElementById('starterButton')
-  starterBtn.addEventListener('click', (e)=>{
+  const starterBtn = document.getElementById('starterButton')
+  starterBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    formContainer.style.display ='block'
-    starterBtn.style.display ='none'
-  
+    formContainer.style.display = 'block'
+    starterBtn.style.display = 'none'
+
   })
 
   let retrievedData = [];
   let indexNow = 0;
- const form = document.getElementById('workoutForm');
+  const form = document.getElementById('workoutForm');
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -59,13 +51,13 @@ const formContainer = document.getElementById('workoutFormContainer')
     }
   });
 
-    const renderWorkoutResult = () => {
+  const renderWorkoutResult = () => {
     const lastIndex = Math.min(indexNow + 3, retrievedData.length);
     const workoutResultContainer = document.getElementById('workoutResultContainer');
     const buttonContainer = document.getElementById('buttonContainer');
 
     // Clear previous results
-    workoutResultContainer.innerHTML = ''; 
+    workoutResultContainer.innerHTML = '';
 
     for (let i = indexNow; i < lastIndex; i++) {
       const template = `
@@ -83,14 +75,14 @@ const formContainer = document.getElementById('workoutFormContainer')
           </div>
         </div>
       `;
-      
+
       workoutResultContainer.innerHTML += template;
     }
-    
+
     const toggleInstructions = () => {
       const instructionToggleContents = document.querySelectorAll('.instruction-toggle-content');
       const instructionToggleButton = document.querySelectorAll('.instruction-toggle-button');
-    
+
       instructionToggleButton.forEach((button, index) => {
         button.addEventListener('click', () => {
           instructionToggleContents[index].classList.toggle('expanded');
@@ -98,17 +90,17 @@ const formContainer = document.getElementById('workoutFormContainer')
         });
       });
     };
-    
-    toggleInstructions();
-    
 
-// Clear previous buttons
-    buttonContainer.innerHTML = ''; 
+    toggleInstructions();
+
+
+    // Clear previous buttons
+    buttonContainer.innerHTML = '';
 
     if (lastIndex < retrievedData.length) {
       const backButton = document.createElement('button');
       backButton.id = 'backButton';
-     
+
       backButton.textContent = 'Back';
       backButton.classList.add('block', 'button', 'is-info', 'is-outlined')
 
@@ -141,14 +133,13 @@ const formContainer = document.getElementById('workoutFormContainer')
       renderWorkoutResult();
     }
   });
-  
+
 });
 
 
 
 
 
-        
 
 
 
@@ -208,7 +199,6 @@ const formContainer = document.getElementById('workoutFormContainer')
 
 
 
-        
 
 
 
@@ -230,5 +220,7 @@ const formContainer = document.getElementById('workoutFormContainer')
 
 
 
-        
+
+
+
 

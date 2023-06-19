@@ -1,13 +1,15 @@
-
-
+{{!-- 
+{{#each newCalories}}
 <div >
 
 <h2>Calories Result</h2>
-<p>Name: {{newCalories.extractedResult.name}}</p>
-<p>Calories Burned: {{newCalories.extractedResult.nf_calories}}</p>
-<p>MET: {{newCalories.extractedResult.met}}</p>
-<p>Description: {{newCalories.workout_description}}</p>
-<p>Duration-: {{newCalories.duration_min}}</p>
-</div>
 
+<p>Name: {{this.name}}</p>
+<p>Calories Burned: {{this.nf_calories}}</p>
+<p>MET: {{this.met}}</p>
+<p>Description: {{this.workout_description}}</p>
+<p>Duration-: {{this.duration_min}}</p>
+
+</div> 
+{{/each}} --}}
 
