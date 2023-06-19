@@ -28,8 +28,50 @@ nav{
     background-color: greenyellow;
 
   }
-  #workoutFormContainer {
+  /* #workoutFormContainer {
 border: solid;
+  } */
+
+  .hero {
+    background-color: #f8f8f8;
+    padding: 3rem;
+    text-align: center;
   }
+
+  .title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .instruction-toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .instruction-toggle-content.expanded {
+    max-height: 1000px; /* Adjust the value as needed to accommodate larger instructions */
+  }
+  
+  .instruction-toggle-button {
+    display: block;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: blue; /* Customize the button color as desired */
+    cursor: pointer;
+  }
+  
+  .instruction-toggle-button:hover {
+    text-decoration: underline;
+  }
+  
+  
   
 

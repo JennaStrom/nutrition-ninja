@@ -1,12 +1,15 @@
-<h1 >Get a tailored workout recommendation with instructions</h1>
-<p>Select your targeted muscle and difficulty level, and hit the submit button</p>
+<div class="content hero">
 
 
-<div id="workoutFormContainer" class="control">
+<h1 class="title" >A Tailored Workout Recommendation</h1>
+<p class="subtitle">Achieve Your Fitness Goals with Personalized Workout Recommendations </p>
+</div>
+
+<div id="workoutFormContainer" class="control block content">
   <form id="workoutForm">
-    <div class="select">
+    <div class="select is-primary">
       <select name="muscle" id="muscle">
-        <option value="chest">Select targeted muscle</option>
+        <option value="">Select targeted muscle</option>
         <option value="abdominals">Abdominals</option>
         <option value="abductors">Abductors</option>
         <option value="adductors">adductors</option>
@@ -25,24 +28,17 @@
         <option value="quadriceps">triceps</option>
       </select>
     </div>
-
-    {{!-- <select name="type" id="type">
-      <option value="cardio">Cardio</option>
-      <option value="strength">Strength</option>
-      <option value="stretching">Stretching</option>
-      <option value="strong">Strongman</option>
-      <option value="powerlifting">Powerlifting</option>
-      <option value="olymplic">olympic_weightlifting</option>
-      <option value="plyometrics">plyometrics</option>
-      <option value="">Cardio</option>
-    </select> --}}
-    <select name="difficulty" id="difficultyLevel">
+<div class="select is-primary">
+  <select name="difficulty" id="difficultyLevel">
+      <option value="">Select difficulty level</option>
       <option value="beginner">beginner</option>
       <option value="intermediate">intermediate</option>
       <option value="expert">expert</option>
     </select>
+</div>
+    
 
-    <input id="submitButton" type="submit" value="Submit"></input>
+    <input id="submitButton" type="submit" value="Submit" class="button is-success is-outlined"></input>
   </form>
 
 </div>
@@ -54,8 +50,16 @@
 
 <div id="buttonContainer">
   <!-- Next button goes here -->
-  
 </div>
+
+
+
+<div id="starter_div">
+  <button id="starterButton" class="button is-primary">Get Started</button>
+</div>
+
+
+
 
 <script src="/js/workout.js" ></script>
 
