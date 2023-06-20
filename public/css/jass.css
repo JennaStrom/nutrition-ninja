@@ -58,7 +58,7 @@ border: solid;
   }
   
   .instruction-toggle-content.expanded {
-    max-height: 1000px; /* Adjust the value as needed to accommodate larger instructions */
+    max-height: 1000px; 
   }
   
   .instruction-toggle-button {
@@ -66,7 +66,7 @@ border: solid;
     margin-top: 10px;
     background-color: transparent;
     border: none;
-    color: blue; /* Customize the button color as desired */
+    color: blue; 
     cursor: pointer;
   }
   
