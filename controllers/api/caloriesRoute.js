@@ -1,16 +1,18 @@
 
 const router = require('express').Router();
 const {User, Calories} = require('../../models');
-
+const withAuth = require('../../utils/auth');
 
 // All routes in this file are prefixed with '/api/calories'
-router.get('/', (req, res)=> {
-    res.render('caloriesForm')
+router.get('/', withAuth, (req, res)=> {
+    res.render('caloriesForm', {
+        logged_in: true
+    })
     
 })
 
 // this ENDPOINT is /api/calories WITH POST HTTP method
-router.post('/', async(req, res)=> {
+router.post('/', withAuth, async(req, res)=> {
     console.log("Request Object: ", req.body);
     console.log("Session: ", req.session);
     // console.log("Current User: ", req.session.user_id);
@@ -82,7 +84,7 @@ console.log('extracted result: ', extractedResult)
             met: extractedResult.met,
             
         })
-console.log('New calory data created: ', newCalories)
+console.log('New calorie data created: ', newCalories)
 
         if(newCalories) {
             // res.render('caloriesResult', {newCalories})

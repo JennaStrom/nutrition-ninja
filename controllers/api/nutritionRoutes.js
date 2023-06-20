@@ -2,15 +2,19 @@ const express = require('express');
 const router = express.Router();
 const Nutrition = require('../../models/nutrition');
 const axios = require('axios');
+const withAuth = require('../../utils/auth');
+const session = require('express-session');
 
 const apiEndpoint2 = 'https://api.api-ninjas.com/v1/nutrition';
 const apinewNinja2 = 'y0Xv/ascWow8jE7ZEojqeA==db1pQsgjws8x78bK'
 
-router.get('/', (req, res) => {
-  res.render('nutritionForm');
+router.get('/', withAuth, (req, res) => {
+  res.render('nutritionForm', {
+    logged_in: true
+  });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   const { body } = req;
 
   const requestParams2 = {

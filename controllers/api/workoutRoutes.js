@@ -3,18 +3,21 @@ const express = require('express');
 const router = express.Router();
 const Workout = require('../../models/workout');
 const axios = require('axios');
+const withAuth = require('../../utils/auth');
 
 const apiEndpoint = 'https://api.api-ninjas.com/v1/exercises';
 const apinewNinja = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO';
 
 // GET route to render the workout form
-router.get('/', (req, res) => {
-  res.render('workoutForm');
+router.get('/', withAuth, (req, res) => {
+  res.render('workoutForm', {
+    logged_in: true
+  });
 });
 
 
 // GET route to handle form submission and retrieve workout data from the third-party API
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   const { body } = req;
 
   const requestParams = {

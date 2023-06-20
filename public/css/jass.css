@@ -15,10 +15,10 @@ html {
     background-color: greenyellow;
     line-height: 3vh;
 }
-nav{
+/* nav{
   display: flex;
   justify-content: flex-end;
-}
+} */
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
@@ -31,7 +31,9 @@ nav{
   /* #workoutFormContainer {
 border: solid;
   } */
-
+#header {
+  background-color: greenyellow;;
+}
   .hero {
     background-color: #f8f8f8;
     padding: 3rem;
