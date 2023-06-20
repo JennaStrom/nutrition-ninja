@@ -1,4 +1,53 @@
 
+
+// const { Model, DataTypes } = require('sequelize');
+// const sequelize = require('../config/connection');
+
+// class Calories extends Model {}
+
+// Calories.init(
+//   {
+//     id: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true,
+//     },
+//     goals: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     activitylevel: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     user_id: {
+//       type: DataTypes.INTEGER,
+//       references: {
+//         model: 'user',
+//         key: 'id',
+//       },
+//     },
+//     extractedResult: {
+//       type: DataTypes.JSON,
+//       allowNull: false,
+//     },
+//   },
+//   {
+//     sequelize,
+//     timestamps: false,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: 'calories',
+//   }
+// );
+
+// module.exports = Calories;
+
+
+
+
+
 const { Model, DataTypes, } = require('sequelize');
 const sequelize = require('../config/connection');
 

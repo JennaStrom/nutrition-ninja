@@ -53,8 +53,9 @@ router.post('/', async (req, res) => {
 console.log(userWorkoutData)
 
     if (userWorkoutData) {
-      
+     
       res.status(200).json(userWorkoutData)
+      
     } else {
       res.status(400).json({ error: 'No workout data found' });
     }
