@@ -36,11 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Function to render the workout result template
         const renderNutritionResult = (data) => {
             const template = `
+            <div class="notification is-primary">
               <p>Name: ${data.name}</p>
               <p>Calories: ${data.calories}</p>
               <p>Protein: ${data.protein_g}</p>
               <p>Carbs: ${data.carbohydrates_total_g}</p>
               <p>Fat: ${data.fat_total_g}</p>
+            </div>
             `;
           
             document.getElementById('nutritionResultsContainer').innerHTML += template;
