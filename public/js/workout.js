@@ -2,6 +2,7 @@
 // https://share.balsamiq.com/c/4CSS9Qs6W1Bg4ZZLaoDwwm.png
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const formContainer = document.getElementById('workoutFormContainer')
   formContainer.style.display = 'none'
@@ -62,22 +63,52 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = indexNow; i < lastIndex; i++) {
       const template = `
         <div id="each_div_${i}" class="box container is-fluid">
+        
           <div class="notification is-primary">
-            <p>Name of exercise: ${retrievedData[i].name}</p>
-            <p>Type of exercise: ${retrievedData[i].type}</p>
-            <p>Muscle targeted: ${retrievedData[i].muscle}</p>
-            <p>Equipment: ${retrievedData[i].equipment}</p>
-            <p>Difficulty level: ${retrievedData[i].difficulty}</p>
+            <p><span>Name of exercise:</span> ${retrievedData[i].name}</p>
+            <p><span>Type of exercise:</span> ${retrievedData[i].type}</p>
+            <p><span>Muscle targeted:</span> ${retrievedData[i].muscle}</p>
+            <p><span>Equipment:</span> ${retrievedData[i].equipment}</p>
+            <p><span>Difficulty level:</span> ${retrievedData[i].difficulty}</p>
           </div>
           <div id="instruction_toggle_${i}" class="instruction-toggle">
-            <p class="instruction-toggle-content">Instructions to follow: ${retrievedData[i].instructions}</p>
+            <p class="instruction-toggle-content"><span>Instructions to follow:</span> ${retrievedData[i].instructions}</p>
             <button class="instruction-toggle-button button is-primary is-outlined">Show Instructions</button>
+           
+            <button data-index="0" class="saveButton button is-primary is-outlined">Save</button>
+      
           </div>
         </div>
       `;
 
       workoutResultContainer.innerHTML += template;
     }
+
+
+const saveBtn = document.querySelectorAll('.saveButton');
+saveBtn.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const index = event.target.dataset.index;
+    const workoutData = retrievedData[index];
+
+    if (workoutData) {
+ // Save the workout data to sessionStorage
+    const savedWorkouts = JSON.parse(sessionStorage.getItem('savedWorkouts')) || [];
+    savedWorkouts.push(workoutData);
+    sessionStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts));
+
+    //modal.......
+
+    } else {
+      throw new Error('Something went wrong to save this workout')
+
+    }
+
+   
+
+  });
+});
+
 
     const toggleInstructions = () => {
       const instructionToggleContents = document.querySelectorAll('.instruction-toggle-content');
@@ -121,6 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  
+
   document.getElementById('buttonContainer').addEventListener('click', async (event) => {
     if (event.target.id === 'nextButton') {
       indexNow += 3;
@@ -133,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderWorkoutResult();
     }
   });
-
+  
 });
 
 
