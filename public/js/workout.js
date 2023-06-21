@@ -133,12 +133,12 @@ saveBtn.forEach((button) => {
       backButton.id = 'backButton';
 
       backButton.textContent = 'Back';
-      backButton.classList.add('block', 'button', 'is-info', 'is-outlined')
+      backButton.classList.add('back_button', 'block', 'button', 'is-outlined', 'is-responsive')
 
       const nextButton = document.createElement('button');
       nextButton.id = 'nextButton';
       nextButton.textContent = 'Next';
-      nextButton.classList.add('block', 'button', 'is-info', 'is-outlined')
+      nextButton.classList.add('next_button', 'block', 'button', 'is-outlined', 'is-responsive')
 
       buttonContainer.appendChild(backButton);
       buttonContainer.appendChild(nextButton);
@@ -148,7 +148,7 @@ saveBtn.forEach((button) => {
       backButton.textContent = 'Back';
 
       buttonContainer.appendChild(backButton);
-      backButton.classList.add('block', 'button', 'is-info', 'is-outlined')
+      backButton.classList.add('back_button', 'block', 'button', 'is-info', 'is-outlined', 'is-responsive')
     }
   };
 

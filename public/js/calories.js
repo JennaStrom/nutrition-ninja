@@ -51,11 +51,12 @@ const renderCaloriesResult = () => {
       const template = `
         <div id="calories_div" class="box container is-fluid">
           <div class="notification is-primary">
-            <p>Name of exercise: ${retrievedData.name}</p>
-            <p>Calories burned: ${retrievedData.nf_calories}</p>
-            <p>MET: ${retrievedData.met}</p>
-            <p>Your activity: ${retrievedData.workout_description}</p>
-            <p>Duration of your activity: ${retrievedData.duration_min} minutes</p>
+            <p class="met_description"><span>Name of exercise:</span> ${retrievedData.name}</p>
+            <p class="met_description"><span>Your activity:</span> ${retrievedData.workout_description}</p>
+            <p class="met_description"><span>Duration of your activity:</span> ${retrievedData.duration_min} minutes</p>
+            <p class="met_description"><span id="calories_bgrd">Calories burned: ${retrievedData.nf_calories}</span></p>
+            <p class="met_description"><span>MET:</span> ${retrievedData.met}</p>
+            <p class="met_description"><span>Metabolic Equivalent (MET) is the rate of energy expended per 30 minutes.</span> </p>
           </div>
         </div>
       `;
