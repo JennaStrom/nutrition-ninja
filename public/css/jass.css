@@ -1,83 +1,115 @@
 html {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
-  }
-  body {
-    margin: 2%;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: greenyellow;
-    line-height: 3vh;
+  background-image: linear-gradient(to right, #323931, #3a4641, #445251, #515f61, #606b71, #606b71, #606b71, #606b71, #515f61, #445251, #3a4641, #323931);
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
-/* nav{
+
+/* body {
+    margin: 2%;
+  } */
+header {
   display: flex;
-  justify-content: flex-end;
-} */
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1%; */
+  line-height: 3vh;
+}
 
-  footer {
-    background-color: greenyellow;
+main {
+  height: 100vh;
+}
 
-  }
-  /* #workoutFormContainer {
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+footer {
+  background-color: black;
+}
+
+footer p {
+  font-size: large;
+}
+
+/* #workoutFormContainer {
 border: solid;
   } */
 #header {
-  background-color: greenyellow;;
+  /* background-image: linear-gradient(to right, #323931, #4c5852, #697977, #8a9b9e, #afbec5, #afbec5, #afbec5, #afbec5, #8a9b9e, #697977, #4c5852, #323931); */
+  background-image: linear-gradient(to right, #323931, #3a4641, #445251, #515f61, #606b71, #606b71, #606b71, #606b71, #515f61, #445251, #3a4641, #323931);
+  height: 10vh;
+  margin-top: 00%;
+  font-weight: bold;
 }
-  .hero {
-    background-color: #f8f8f8;
-    padding: 3rem;
-    text-align: center;
-  }
 
-  .title {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
+#logo-name {
+  color: whitesmoke;
+  font-weight: bold;
+}
 
-  .subtitle {
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 2rem;
-  }
-  .instruction-toggle-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .instruction-toggle-content.expanded {
-    max-height: 1000px; 
-  }
-  
-  .instruction-toggle-button {
-    display: block;
-    margin-top: 10px;
-    background-color: transparent;
-    border: none;
-    color: blue; 
-    cursor: pointer;
-  }
-  
-  .instruction-toggle-button:hover {
-    text-decoration: underline;
-  }
-  span {
-    font-size: large;
-    font-weight: bold;
-  }
-  
-  
-  
+#welcome-message {
+  color: whitesmoke;
+  font-weight: bold;
+}
 
+.banner {
+  height: 16vh;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.login-button {
+  box-shadow: 10px 10px 10px greenyellow;
+}
+
+.hero {
+  background-color: #f8f8f8;
+  padding: 3rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.instruction-toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.instruction-toggle-content.expanded {
+  max-height: 1000px;
+}
+
+.instruction-toggle-button {
+  display: block;
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.instruction-toggle-button:hover {
+  text-decoration: underline;
+}
+
+span {
+  font-size: large;
+  font-weight: bold;
+}
