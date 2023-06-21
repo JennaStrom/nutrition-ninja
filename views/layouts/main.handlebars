@@ -16,13 +16,13 @@
     <h1 id="logo-name" class="navbar-brand">Nutrition Ninja</h1>
     <nav class="navbar-menu is-active navbar-end">
       <ul class="columns">
-        <li><a class="navbar-item column" href="/">Home</a></li>
+        <li><a id="navbar-menu" class="navbar-item column" href="/">Home</a></li>
         {{#if logged_in}}
-        <li><a class="navbar-item column" href="/api/nutrition">Nutrition</a></li>
-        <li><a class="navbar-item column" href="/api/calories">Calories Burned</a></li>
-        <li><a class="navbar-item column" href="/api/workouts">Workouts</a></li>
-        <li><a class="navbar-item column" href="/profile">Profile</a></li>
-        <li><a id="logout" class="navbar-item column" href="/logout">Logout</a></li>
+        <li><a id="navbar-menu" class="navbar-item column" href="/api/nutrition">Nutrition</a></li>
+        <li><a id="navbar-menu" class="navbar-item column" href="/api/calories">Calories Burned</a></li>
+        <li><a id="navbar-menu" class="navbar-item column" href="/api/workouts">Workouts</a></li>
+        <li><a id="navbar-menu" class="navbar-item column" href="/profile">Profile</a></li>
+        <li><a id="navbar-menu" id="logout" class="navbar-item column" href="/logout">Logout</a></li>
          {{/if}}
       </ul>
     </nav>
