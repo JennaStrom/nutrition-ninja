@@ -171,5 +171,29 @@ span {
   color: oldlace;
 }
 #workoutFormContainer{
-  margin-top: 10%;
+  margin-top: 5%;
 }
+
+#calories_bgrd {
+  background-color: antiquewhite;
+  color: black;
+} 
+#met_description {
+  padding-top: 1%;
+}
+.calories_label {
+  color: aliceblue;
+  padding-bottom: 5%;
+}
+
+/* @media screen and (max-width: 552px) {
+  .my-element {
+    width: 50%;
+  }
+} */
+
+.back_button, .next_button{
+  margin:  2%;
+}
+
+

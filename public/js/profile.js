@@ -7,12 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileContainer = document.getElementById('profileContainer');
 
     const savedWorkouts = JSON.parse(sessionStorage.getItem('savedWorkouts'));
-  
+  const showDisplayer_title = document.getElementById('show_displayer')
+
     const showButton = document.createElement('button');
     showButton.id = 'showButton';
+    showButton.classList.add('show_button', 'button', 'is-primary', 'is-outlined', 'is-rounded')
     showButton.textContent = 'Show saved data';
+
+    
     showDataContainer.appendChild(showButton);
   
+    showButton.style.display ='none',
+    showDisplayer_title.addEventListener('click', (event)=> {
+      event.preventDefault()
+      showButton.style.display= 'block'
+ 
+    })
+
     // Variable to check the current status of the showButton
     let isShowingData = false; 
   
@@ -86,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
         showButton.textContent = 'Show saved workout data';
-        showButton.classList.add('button', 'is-primary', 'is-outlined', 'is-rounded')
+        showButton.classList.add('show_button', 'button', 'is-primary', 'is-outlined', 'is-rounded')
         profileContainer.style.display = 'none';
       }
     });
