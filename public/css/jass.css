@@ -55,6 +55,12 @@ border: solid;
   font-weight: bold;
 }
 
+#profile-welcome {
+  color: whitesmoke;
+}
+#navbar-menu {
+  color: whitesmoke;
+}
 .banner {
   height: 16vh;
   width: auto;
