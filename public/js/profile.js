@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isShowingData) {
         showButton.textContent = 'Hide saved data';
         profileContainer.style.display = 'block';
-        profileContainer.innerHTML = ''; /
+        profileContainer.innerHTML = ''; 
   
         if (savedWorkouts && savedWorkouts.length > 0) {
           savedWorkouts.forEach((workout, index) => {
