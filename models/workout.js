@@ -13,11 +13,11 @@ Workout.init(
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         type: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         muscle: {
             type: DataTypes.STRING,
@@ -31,7 +31,7 @@ Workout.init(
         },
         difficulty: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
         },
         instructions: {
