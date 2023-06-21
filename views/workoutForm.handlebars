@@ -1,70 +1,74 @@
-<div id="workoutBody">
-<video id="video" autoplay muted loop>
-      <source src="../public/image/workout.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-</div>
-<div class="content hero">
+{{!-- <div id="workoutBody">
+
+</div> --}}
 
 
-  <h1 class="title">A Tailored Workout Recommendation</h1>
-  <p class="subtitle">Achieve Your Fitness Goals with Personalized Workout Recommendations </p>
-</div>
-
-<div id="workoutFormContainer" class="control block content">
-  <form id="workoutForm">
-    <div class="select is-primary">
-      <select name="muscle" id="muscle">
-        <option value="">Select targeted muscle</option>
-        <option value="abdominals">Abdominals</option>
-        <option value="abductors">Abductors</option>
-        <option value="adductors">adductors</option>
-        <option value="biceps">biceps</option>
-        <option value="calves">calves</option>
-        <option value="chest">Chest</option>
-        <option value="forearms">forearms</option>
-        <option value="glutes">glutes</option>
-        <option value="hamstrings">hamstrings</option>
-        <option value="lats">lats</option>
-        <option value="lower_back">lower_back</option>
-        <option value="middle_back">middle_back</option>
-        <option value="neck">neck</option>
-        <option value="quadriceps">quadriceps</option>
-        <option value="traps">traps</option>
-        <option value="quadriceps">triceps</option>
-      </select>
-    </div>
-    <div class="select is-primary">
-      <select name="difficulty" id="difficultyLevel">
-        <option value="">Select difficulty level</option>
-        <option value="beginner">beginner</option>
-        <option value="intermediate">intermediate</option>
-        <option value="expert">expert</option>
-      </select>
-    </div>
-
-
-    <input id="submitButton" type="submit" value="Submit" class="button is-success is-outlined"></input>
-  </form>
-
-</div>
-
-
-<div id="workoutResultContainer" class="container is-fluid">
-
-</div>
-
-<div id="buttonContainer">
-  <!-- Next button goes here -->
+<div class="hero-image">
+  <video id="video" autoplay muted loop>
+    <source src="/image/workout.mp4" type="video/mp4">
+  </video>
+  <div class="content_div">
+   <h1 class="title_main">A Tailored Workout Recommendation</h1>
+    <p class="sub_title">Achieve Your Fitness Goals with Personalized Workout Recommendations </p>
+  </div>
 </div>
 
 
 
-<div id="starter_div">
-  <button id="starterButton" class="button is-primary">Get Started</button>
+  <div id="workoutFormContainer" class="control block content">
+    <form id="workoutForm">
+      <div class="select is-primary">
+        <select name="muscle" id="muscle">
+          <option value="">Select targeted muscle</option>
+          <option value="abdominals">Abdominals</option>
+          <option value="abductors">Abductors</option>
+          <option value="adductors">adductors</option>
+          <option value="biceps">biceps</option>
+          <option value="calves">calves</option>
+          <option value="chest">Chest</option>
+          <option value="forearms">forearms</option>
+          <option value="glutes">glutes</option>
+          <option value="hamstrings">hamstrings</option>
+          <option value="lats">lats</option>
+          <option value="lower_back">lower_back</option>
+          <option value="middle_back">middle_back</option>
+          <option value="neck">neck</option>
+          <option value="quadriceps">quadriceps</option>
+          <option value="traps">traps</option>
+          <option value="quadriceps">triceps</option>
+        </select>
+      </div>
+      <div class="select is-primary">
+        <select name="difficulty" id="difficultyLevel">
+          <option value="">Select difficulty level</option>
+          <option value="beginner">beginner</option>
+          <option value="intermediate">intermediate</option>
+          <option value="expert">expert</option>
+        </select>
+      </div>
+
+
+      <input id="submitButton" type="submit" value="Submit" class="button is-success is-outlined"></input>
+    </form>
+
+  </div>
+
+
+  <div id="workoutResultContainer" class="container is-fluid">
+
+  </div>
+
+  <div id="buttonContainer">
+    <!-- Next button goes here -->
+  </div>
+
+
+
+  <div id="starter_div">
+    <button id="starterButton" class="button is-primary"><span>Get Started</span> </button>
+  </div>
+
+
 </div>
-
-
-
 
 <script src="/js/workout.js"></script>

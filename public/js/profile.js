@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
 
         
-        showButton.textContent = 'Show saved data';
-        showButton.classList.add()
+        showButton.textContent = 'Show saved workout data';
+        showButton.classList.add('button', 'is-primary', 'is-outlined', 'is-rounded')
         profileContainer.style.display = 'none';
       }
     });
