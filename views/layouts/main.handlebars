@@ -5,38 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrition Ninja</title>
-  {{!--
-  <link rel="stylesheet" href="/css/mystyles.scss" type="css"> --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
 </head>
 
 <body>
 
-  <header id="header" class="display-flex justify-space-between align-center p-2 navbar">
-    <h1 id="logo-name" class="navbar-brand">Nutrition Ninja</h1>
-    <nav class="navbar-menu is-transparent is-active navbar-end" id="nav">
-      <ul class="columns">
-        <li><a id="navbar-menu" class="navbar-item column" href="/">Home</a></li>
-        {{#if logged_in}}
-        <li><a id="navbar-menu" class="navbar-item column" href="/api/nutrition">Nutrition</a></li>
-        <li><a id="navbar-menu" class="navbar-item column" href="/api/calories">Calories Burned</a></li>
-        <li><a id="navbar-menu" class="navbar-item column" href="/api/workouts">Workouts</a></li>
-        <li><a id="navbar-menu" class="navbar-item column" href="/profile">Profile</a></li>
-        <li><a id="navbar-menu" id="logout" class="navbar-item column" href="/logout">Logout</a></li>
-        {{/if}}
-      </ul>
-    </nav>
-  </header>
-  <div>
-    {{!-- <div>
-      <button id="startButton" class="btn">Get Started</button>
-    </div> --}}
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 id="logo-name" class="navbar-item">Nutrition Ninja</h1>
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navMenu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a id="navbar-menu" class="navbar-item" href="/">Home</a>
+        {{#if logged_in}}
+        <a id="navbar-menu" class="navbar-item" href="/api/nutrition">Nutrition</a>
+        <a id="navbar-menu" class="navbar-item" href="/api/calories">Calories Burned</a>
+        <a id="navbar-menu" class="navbar-item" href="/api/workouts">Workouts</a>
+        <a id="navbar-menu" class="navbar-item" href="/profile">Profile</a>
+        <a id="logout" class="navbar-item" href="/logout">Logout</a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+
+  <div>
     <main class="mt-6">
       {{{body}}}
     </main>
-
   </div>
 
   <footer class="columns">
@@ -48,8 +56,24 @@
     <p class="column is-one-quarter">NK * JS * NT</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
 
-
+      if (navbarBurgers.length > 0) {
+        navbarBurgers.forEach(function (el) {
+          el.addEventListener('click', function () {
+            var target = document.getElementById(el.dataset.target);
+            el.classList.toggle('is-active');
+            target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
 
 </body>
 
