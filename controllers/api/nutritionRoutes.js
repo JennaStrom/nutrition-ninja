@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const Nutrition = require('../../models/nutrition');
@@ -7,7 +6,7 @@ const withAuth = require('../../utils/auth');
 const session = require('express-session');
 
 const apiEndpoint2 = 'https://api.api-ninjas.com/v1/nutrition';
-const apinewNinja2 = process.env.NUTRITION_API_KEY;
+const apinewNinja2 = 'y0Xv/ascWow8jE7ZEojqeA==db1pQsgjws8x78bK'
 
 router.get('/', withAuth, (req, res) => {
   res.render('nutritionForm', {
