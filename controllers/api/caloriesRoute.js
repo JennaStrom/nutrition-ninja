@@ -20,7 +20,7 @@ router.post('/', withAuth, async(req, res)=> {
 
     const apiEndpoint = 'https://trackapi.nutritionix.com/v2/natural/exercise'
     const apiWorkoutKey = process.env.CALORIES_API_KEY;
-    const appId = '85d6555d'
+    const appId = process.env.CALORIES_API_APPID
 
     
     

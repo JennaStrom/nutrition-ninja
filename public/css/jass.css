@@ -20,6 +20,7 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  color: whitesmoke;
 }
 
 footer {
@@ -104,14 +105,23 @@ border: solid;
 
 .title {
   font-size: 3rem;
-  color: #333;
+  color: whitesmoke;
   margin-bottom: 1.5rem;
+  text-shadow: -1px -1px 0 black,  
+  1px -1px 0 black,
+  -1px 1px 0 black,
+  1px 1px 0 black;
 }
 
 .subtitle {
   font-size: 1.5rem;
-  color: #666;
+  color: whitesmoke;
   margin-bottom: 2rem;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black,  
+  1px -1px 0 black,
+  -1px 1px 0 black,
+  1px 1px 0 black;
 }
 
 .instruction-toggle-content {
@@ -251,3 +261,35 @@ width: fit-content;
   -o-background-size: cover;
   background-size: cover;
 }
+
+#nutritionH1,
+#caloriesH1 {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#caloriesPage {
+    background: url(../image/caloriesBanner.jpeg) repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #workoutPage {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+  }
+  
+  #workoutPage video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
