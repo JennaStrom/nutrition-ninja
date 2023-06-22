@@ -6,14 +6,10 @@ html {
   /* 2 */
 }
 
-/* body {
-    margin: 2%;
-  } */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1%; */
   line-height: 3vh;
 }
 
@@ -38,7 +34,6 @@ footer p {
 border: solid;
   } */
 #header {
-  /* background-image: linear-gradient(to right, #323931, #4c5852, #697977, #8a9b9e, #afbec5, #afbec5, #afbec5, #afbec5, #8a9b9e, #697977, #4c5852, #323931); */
   background-image: linear-gradient(to right, #323931, #3a4641, #445251, #515f61, #606b71, #606b71, #606b71, #606b71, #515f61, #445251, #3a4641, #323931);
   height: 10vh;
   margin-top: 00%;
@@ -71,8 +66,15 @@ border: solid;
 }
 
 #sign-up-text {
-  padding-bottom: 3%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
 }
+
+#login-header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
 .banner {
   height: 16vh;
   width: auto;
@@ -82,8 +84,12 @@ border: solid;
   padding: 0;
 }
 
-.login-button {
-  box-shadow: 10px 10px 10px greenyellow;
+.login-header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-form {
+  padding-top: 4%;
 }
 
 .hero {

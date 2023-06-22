@@ -1,39 +1,38 @@
 <div class="banner">
     <img src="/homepagebanner.jpeg" class="banner-art">
 </div>
-<section class="sign-up-page columns is-multiline m-3">
-    <form style="text-align: center" class="form signup-form column is-one-half has-background-success-light">
-           <h2 id="sign-up-text">Sign Up!</h2>
+<section id="sign-up-section" class="container sign-up-page columns is-multiline m-3">
+    <form style="text-align: left" class="form signup-form column is-two-fifths has-background-success-light mt-3 is-offset-5">
+        <h2 class="mb-2" id="sign-up-text">Sign Up!</h2>
         <div class="form-group">
             <label for="username-signup">Username:</label>
-            <input class="form-input" type="text" id="username-signup" name="name">
+            <input class="form-input mb-2" type="text" id="username-signup" name="name">
         </div>
         <div class="form-group">
             <label for="password-signup">Password:</label>
-            <input class="form-input" type="password" id="password-signup" />
+            <input class="form-input mb-2" type="password" id="password-signup" />
         </div>
         <div class="form-group">
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
+            <select class="mb-2" id="gender" name="gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Female">I do not want to share</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="weight">Weight in kilograms:</label>
-            <input type="number" id="weight" name="weight">
+            <label for="weight">Weight in Kilograms:</label>
+            <input class="mb-2" type="number" id="weight" name="weight">
         </div>
         <div class="form-group">
-            <label for="height">Height in centimeters:</label>
-            <input type="number" id="height" name="height">
+            <label for="height">Height in Centimeters:</label>
+            <input class="mb-2" type="number" id="height" name="height">
         </div>
         <div class="form-group">
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age">
+            <input class="mb-2" type="number" id="age" name="age">
         </div>
         <div class="form-group">
-            <button class="button is-primary is-outlined" id="submitButton" type="submit">Submit</button>
         </div>
     </form>
 </section>
