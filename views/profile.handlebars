@@ -1,22 +1,34 @@
 <div>
-<img src="image/profileBanner.jpeg" alt="training">
-<h1 id="profile-welcome">Welcome, {{user.username}}!</h1>
+  <img src="image/profileBanner.jpeg" alt="training">
+  <h1 id="profile-welcome">Welcome, {{user.username}}!</h1>
 </div>
 
 <div class="columns">
-<a class=" button column is-one-fifth is-offset-1 is-success" href="/api/calories">Calories Burned</a>
+  <a id="show_workoutButton" class="button show_button column is-one-fifth is-offset-1 is-success is-rounded"
+    href=""></a>
 
-<a class="button column is-one-fifth is-offset-1 is-success" href="/api/workouts">Workouts</a>
+  <a id="show_nutriButton" class="button column is-one-fifth is-offset-1 is-success is-rounded" href=""></a>
+  <a class=" button column is-one-fifth is-offset-1 is-success is-rounded" href="/api/calories">Calories Burned</a>
 
-<a class="button column is-one-fifth is-offset-1 is-success" href="/api/nutrition">Nutrition</a>
+
 
 </div>
 
-<div id="showSavedDataContainer"></div>
 
-<div id="profileContainer">
+<div id="allDataContainers_wrapper">
+  <div id="profileContainer">
+    <div id="workout_container" class="workout-container">
 
-  <div id="savedNutritionContainer"></div>
+
+    </div>
+
+
+  </div>
+  <div id="nutrition_wrapper" class="columns is-desktop">
+    <div id="savedNutritionContainer" class="column"></div>
+  </div>
+
+
 
 </div>
 

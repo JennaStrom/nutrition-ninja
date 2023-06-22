@@ -216,12 +216,6 @@ span {
   padding-bottom: 5%;
 }
 
-/* @media screen and (max-width: 552px) {
-  .my-element {
-    width: 50%;
-  }
-} */
-
 .back_button,
 .next_button {
   margin: 2%;
@@ -229,4 +223,8 @@ span {
 
 .save_Button {
   display: block;
+  margin-top: 1%;
+}
+#nutrition_wrapper, #nutritionContent_div {
+  width: fit-content;
 }
