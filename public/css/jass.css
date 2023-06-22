@@ -229,4 +229,25 @@ span {
 
 .save_Button {
   display: block;
+  margin-top: 1%;
+}
+
+
+#nutrition_wrapper, #nutritionContent_div {
+width: fit-content;
+}
+
+#homeButtons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+#nutritionPage {
+  background: url(../image/nutritionBanner.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

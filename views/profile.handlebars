@@ -1,4 +1,36 @@
 <div>
+ <img src="image/profileBanner.jpeg" alt="training">
+ <h1 id="profile-welcome">Welcome, {{user.username}}!</h1>
+</div>
+ 
+<div class="columns">
+ <a id="show_workoutButton" class="button show_button column is-one-fifth is-offset-1 is-success is-rounded"
+  href=""></a>
+ 
+ <a id="show_nutriButton" class="button column is-one-fifth is-offset-1 is-success is-rounded" href=""></a>
+ <a class=" button column is-one-fifth is-offset-1 is-success is-rounded" href="/api/calories">Calories Burned</a>
+ 
+ 
+</div>
+ 
+<div id="allDataContainers_wrapper">
+ <div id="profileContainer">
+  <div id="workout_container" class="workout-container">
+ 
+  </div>
+ 
+ </div>
+ <div id="nutrition_wrapper" class="columns is-desktop">
+  <div id="savedNutritionContainer" class="column"></div>
+ </div>
+ 
+ 
+</div>
+ 
+ 
+<script src="js/profile.js"></script>
+
+{{!-- <div>
 <img src="image/profileBanner.jpeg" alt="training">
 <h1 id="profile-welcome">Welcome, {{user.username}}!</h1>
 </div>
@@ -22,4 +54,4 @@
 
 
 
-<script src="js/profile.js"></script>
+<script src="js/profile.js"></script> --}}
