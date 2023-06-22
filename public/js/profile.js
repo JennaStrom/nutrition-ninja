@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showButton = document.createElement('button');
     showButton.id = 'showButton';
-    showButton.classList.add('show_button', 'button', 'is-primary', 'is-outlined', 'is-rounded')
+    showButton.classList.add('show_button', 'button', 'is-success', 'is-outlined', 'is-rounded')
     showButton.textContent = 'Show saved data';
 
     
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
             // Create the toggle button for the workout content
             const toggleButton = document.createElement('button');
-            toggleButton.classList.add('datashow-toggle-button', 'button', 'is-primary', 'is-outlined');
+            toggleButton.classList.add('datashow-toggle-button', 'button', 'is-success', 'is-outlined');
             toggleButton.textContent = 'Show this data';
             toggleButton.addEventListener('click', () => {
               workoutContent.classList.toggle('expanded');
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
            
             workoutContent.innerHTML = `
             <div class="box container is-fluid">
-              <div class="notification is-primary">
+              <div class="notification is-success">
                 <p><span>Type of exercise:</span> ${workout.type}</p>
                 <p><span>Muscle targeted:</span> ${workout.muscle}</p>
                 <p><span>Equipment:</span> ${workout.equipment}</p>
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
         showButton.textContent = 'Show saved workout data';
-        showButton.classList.add('show_button', 'button', 'is-primary', 'is-outlined', 'is-rounded')
+        showButton.classList.add('show_button', 'button', 'is-success', 'is-outlined', 'is-rounded')
         profileContainer.style.display = 'none';
       }
     });
