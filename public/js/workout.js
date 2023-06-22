@@ -1,12 +1,7 @@
 
-// https://share.balsamiq.com/c/4CSS9Qs6W1Bg4ZZLaoDwwm.png
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const formContainer = document.getElementById('workoutFormContainer')
   formContainer.style.display = 'none'
-
 
   const starterBtn = document.getElementById('starterButton')
   starterBtn.addEventListener('click', (e) => {
@@ -84,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       workoutResultContainer.innerHTML += template;
     }
 
-
     const saveBtn = document.querySelectorAll('.saveButton');
     saveBtn.forEach((button) => {
       button.addEventListener('click', (event) => {
@@ -92,19 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const workoutData = retrievedData[index];
 
         if (workoutData) {
-          // Save the workout data to sessionStorage
+
           const savedWorkouts = JSON.parse(sessionStorage.getItem('savedWorkouts')) || [];
           savedWorkouts.push(workoutData);
           sessionStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts));
-
-          //modal.......
 
         } else {
           throw new Error('Something went wrong to save this workout')
 
         }
-
-
 
       });
     });
@@ -151,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
       backButton.classList.add('back_button', 'block', 'button', 'is-info', 'is-outlined', 'is-responsive')
     }
   };
-
 
 
   document.getElementById('buttonContainer').addEventListener('click', async (event) => {

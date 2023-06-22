@@ -26,8 +26,6 @@ router.post('/', withAuth, async (req, res) => {
     },
     params: {
       muscle: body.muscle,
-      // type: body.type,
-      // name: body.name,
       difficulty: body.difficulty,
     },
   };
@@ -37,10 +35,9 @@ router.post('/', withAuth, async (req, res) => {
     const data = response.data;
 
     let extractedData = [];
-    // let extractedResult
     for (let i = 0; i < data.length; i++) {
-      
-    let  extractedResult = {
+
+      let extractedResult = {
         name: data[i].name,
         type: data[i].type,
         muscle: data[i].muscle,
@@ -48,17 +45,16 @@ router.post('/', withAuth, async (req, res) => {
         difficulty: data[i].difficulty,
         instructions: data[i].instructions,
       };
-  
+
       extractedData.push(extractedResult);
     }
-// console.log(extractedResult)
     const userWorkoutData = await Workout.bulkCreate(extractedData);
-console.log(userWorkoutData)
+    console.log(userWorkoutData)
 
     if (userWorkoutData) {
-     
+
       res.status(200).json(userWorkoutData)
-      
+
     } else {
       res.status(400).json({ error: 'No workout data found' });
     }
