@@ -62,8 +62,12 @@ border: solid;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#nav {
+  background-color: transparent;
+}
+
 #navbar-menu {
-  color: whitesmoke;
+  color: black
 }
 
 #navbar-menu:hover {
