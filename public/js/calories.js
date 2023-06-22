@@ -1,11 +1,7 @@
 
-
-
 const caloriesBtn = document.getElementById('caloriesButton')
 
-
 const CalculatedCalories = async (event) => {
-  // prevent the browser from refrsheing before we GET OUR DATA
   event.preventDefault();
   console.log("Calling Server API...")
   try {
@@ -19,8 +15,6 @@ const CalculatedCalories = async (event) => {
     };
 
     console.log(queryParams)
-
-   
 
     const response = await fetch('/api/calories', {
       method: 'POST',
@@ -47,7 +41,6 @@ const CalculatedCalories = async (event) => {
 const renderCaloriesResult = () => {
   const caloriesResultContainer = document.getElementById('caloriesResultContainer');
  
-    
       const template = `
         <div id="calories_div" class="box container is-fluid">
           <div class="notification is-primary">
@@ -63,7 +56,6 @@ const renderCaloriesResult = () => {
 
       caloriesResultContainer.innerHTML += template;
    }
-
 
 
 caloriesBtn.addEventListener('click', CalculatedCalories)

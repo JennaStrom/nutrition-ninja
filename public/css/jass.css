@@ -31,9 +31,6 @@ footer p {
   font-size: large;
 }
 
-/* #workoutFormContainer {
-border: solid;
-  } */
 #header {
   background-image: linear-gradient(to right, #323931, #3a4641, #445251, #515f61, #606b71, #606b71, #606b71, #606b71, #515f61, #445251, #3a4641, #323931);
   height: 10vh;
@@ -226,12 +223,6 @@ span {
   padding-bottom: 5%;
 }
 
-/* @media screen and (max-width: 552px) {
-  .my-element {
-    width: 50%;
-  }
-} */
-
 .back_button,
 .next_button {
   margin: 2%;
@@ -251,7 +242,6 @@ width: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* height: 100vh; */
 }
 
 #nutritionPage {
