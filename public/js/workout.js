@@ -85,29 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-const saveBtn = document.querySelectorAll('.saveButton');
-saveBtn.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    const index = event.target.dataset.index;
-    const workoutData = retrievedData[index];
+    const saveBtn = document.querySelectorAll('.saveButton');
+    saveBtn.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const index = event.target.dataset.index;
+        const workoutData = retrievedData[index];
 
-    if (workoutData) {
- // Save the workout data to sessionStorage
-    const savedWorkouts = JSON.parse(sessionStorage.getItem('savedWorkouts')) || [];
-    savedWorkouts.push(workoutData);
-    sessionStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts));
+        if (workoutData) {
+          // Save the workout data to sessionStorage
+          const savedWorkouts = JSON.parse(sessionStorage.getItem('savedWorkouts')) || [];
+          savedWorkouts.push(workoutData);
+          sessionStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts));
 
-    //modal.......
+          //modal.......
 
-    } else {
-      throw new Error('Something went wrong to save this workout')
+        } else {
+          throw new Error('Something went wrong to save this workout')
 
-    }
+        }
 
-   
 
-  });
-});
+
+      });
+    });
 
 
     const toggleInstructions = () => {
@@ -152,7 +152,7 @@ saveBtn.forEach((button) => {
     }
   };
 
-  
+
 
   document.getElementById('buttonContainer').addEventListener('click', async (event) => {
     if (event.target.id === 'nextButton') {
@@ -166,7 +166,7 @@ saveBtn.forEach((button) => {
       renderWorkoutResult();
     }
   });
-  
+
 });
 
 
