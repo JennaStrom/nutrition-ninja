@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const router = require('express').Router();
 const {User, Calories} = require('../../models');
 const withAuth = require('../../utils/auth');
@@ -19,7 +19,7 @@ router.post('/', withAuth, async(req, res)=> {
     // Req.session = { cookie: {}, user_id: 1, logged_in: true}
 
     const apiEndpoint = 'https://trackapi.nutritionix.com/v2/natural/exercise'
-    const apiWorkoutKey = 'b390e29a58c8183e487d273f4488f5ef'
+    const apiWorkoutKey = process.env.CALORIES_API_KEY;
     const appId = '85d6555d'
 
     
