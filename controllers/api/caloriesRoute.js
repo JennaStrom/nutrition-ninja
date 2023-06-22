@@ -15,16 +15,12 @@ router.get('/', withAuth, (req, res)=> {
 router.post('/', withAuth, async(req, res)=> {
     console.log("Request Object: ", req.body);
     console.log("Session: ", req.session);
-    // console.log("Current User: ", req.session.user_id);
-    // Req.session = { cookie: {}, user_id: 1, logged_in: true}
-
+   
     const apiEndpoint = 'https://trackapi.nutritionix.com/v2/natural/exercise'
     const apiWorkoutKey = process.env.CALORIES_API_KEY;
-    const appId = '85d6555d'
+    const appId = process.env.CALORIES_API_APPID;
 
-    
-    
-    
+           
     const { workout_description, duration_min} = req.body;
     
     try {
@@ -64,9 +60,8 @@ router.post('/', withAuth, async(req, res)=> {
         
         const response = await fetch(apiEndpoint, requestParams)
         const data = await response.json()
-    //    const {exercises} = data
-        console.log('api response:', data)
 
+        console.log('api response:', data)
 
         const extractedResult = {
             name: data.exercises[0].name,
@@ -87,7 +82,6 @@ console.log('extracted result: ', extractedResult)
 console.log('New calorie data created: ', newCalories)
 
         if(newCalories) {
-            // res.render('caloriesResult', {newCalories})
             res.status(200).json(newCalories)
         }
         else {
