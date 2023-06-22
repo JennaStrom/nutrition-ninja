@@ -6,7 +6,7 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector('#password-login').value.trim();
 
   if (username && password) {
-    // Where should this go
+
     const response = await fetch('/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      alert('Incorrect username or password, please try again')
     }
   }
 };
