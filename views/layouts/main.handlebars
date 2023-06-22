@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrition Ninja</title>
-  {{!-- <link rel="stylesheet" href="/css/mystyles.scss" type="css"> --}}
+  {{!--
+  <link rel="stylesheet" href="/css/mystyles.scss" type="css"> --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
 </head>
@@ -14,7 +15,7 @@
 
   <header id="header" class="display-flex justify-space-between align-center p-2 navbar">
     <h1 id="logo-name" class="navbar-brand">Nutrition Ninja</h1>
-    <nav class="navbar-menu is-active navbar-end">
+    <nav class="navbar-menu is-transparent is-active navbar-end" id="nav">
       <ul class="columns">
         <li><a id="navbar-menu" class="navbar-item column" href="/">Home</a></li>
         {{#if logged_in}}
@@ -23,7 +24,7 @@
         <li><a id="navbar-menu" class="navbar-item column" href="/api/workouts">Workouts</a></li>
         <li><a id="navbar-menu" class="navbar-item column" href="/profile">Profile</a></li>
         <li><a id="navbar-menu" id="logout" class="navbar-item column" href="/logout">Logout</a></li>
-         {{/if}}
+        {{/if}}
       </ul>
     </nav>
   </header>
@@ -35,12 +36,14 @@
     <main class="mt-6">
       {{{body}}}
     </main>
-   
+
   </div>
 
-   <footer class="columns">
+  <footer class="columns">
     <p class="column is-one-quarter is-offset-1">
-       <iframe src="https://giphy.com/embed/3d4RmvOnRoYrnRBcFS" width="45" height="60" frameBorder="0" class="giphy-embed"></iframe><p><a href="https://giphy.com/gifs/bilbareed-kids-children-ninja-3d4RmvOnRoYrnRBcFS"></a>
+      <iframe src="https://giphy.com/embed/3d4RmvOnRoYrnRBcFS" width="45" height="60" frameBorder="0"
+        class="giphy-embed"></iframe>
+    <p><a href="https://giphy.com/gifs/bilbareed-kids-children-ninja-3d4RmvOnRoYrnRBcFS"></a>
     </p>
     <p class="column is-one-quarter">NK * JS * NT</p>
   </footer>

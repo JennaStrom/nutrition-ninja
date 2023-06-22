@@ -10,7 +10,7 @@ const signupFormHandler = async (event) => {
 
     if (username && password && gender && weight && age) {
         console.log({ username, password, gender, weight, height, age })
-        //where should the fetch be from???? It doesn't like signup...
+        
         const response = await fetch('/signup', {
             method: 'POST',
             body: JSON.stringify({ username, password, gender, weight, height, age }),

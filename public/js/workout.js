@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const template = `
         <div id="each_div_${i}" class="box container is-fluid">
         
-          <div class="notification is-primary">
+          <div class="notification is-success">
             <p><span>Name of exercise:</span> ${retrievedData[i].name}</p>
             <p><span>Type of exercise:</span> ${retrievedData[i].type}</p>
             <p><span>Muscle targeted:</span> ${retrievedData[i].muscle}</p>
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="instruction-toggle-content"><span>Instructions to follow:</span> ${retrievedData[i].instructions}</p>
             <button class="instruction-toggle-button button is-primary is-outlined">Show Instructions</button>
            
-            <button data-index="0" class="saveButton button is-primary is-outlined">Save</button>
+            <button data-index="0" class="saveButton button is-success is-outlined">Save</button>
       
           </div>
         </div>

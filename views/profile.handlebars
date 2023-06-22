@@ -1,14 +1,13 @@
-{{!-- <div id="workoutBody">
-<video id="video" autoplay muted loop>
-      <source src="../public/image/workout.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-</div> --}}
+<div>
+<img src="image/profileBanner.jpeg" alt="training">
 <h1 id="profile-welcome">Welcome, {{user.username}}!</h1>
+</div>
 
 <div class="columns">
 <a class=" button column is-one-fifth is-offset-1 is-success" href="/api/calories">Calories Burned</a>
-<button id="show_displayer" class="button column is-one-fifth is-offset-1 is-success">Workouts</button >
+
+<a class="button column is-one-fifth is-offset-1 is-success" href="/api/workouts">Workouts</a>
+
 <a class="button column is-one-fifth is-offset-1 is-success" href="/api/nutrition">Nutrition</a>
 
 </div>
