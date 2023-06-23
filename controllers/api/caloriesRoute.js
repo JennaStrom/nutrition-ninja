@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {User, Calories} = require('../../models');
 const withAuth = require('../../utils/auth');
+const fetch = require('node-fetch')
 
 // All routes in this file are prefixed with '/api/calories'
 router.get('/', withAuth, (req, res)=> {
