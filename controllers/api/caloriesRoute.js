@@ -16,8 +16,8 @@ router.post('/', withAuth, async(req, res)=> {
     console.log("Session: ", req.session);
    
     const apiEndpoint = 'https://trackapi.nutritionix.com/v2/natural/exercise'
-    const apiWorkoutKey = 'b390e29a58c8183e487d273f4488f5ef'
-    const appId = '85d6555d'
+    const apiCaloriesKey = process.env.CALORIES_API_KEY;
+    const appId = process.env.CALORIES_API_APPID;
 
            
     const { workout_description, duration_min} = req.body;
@@ -50,7 +50,7 @@ router.post('/', withAuth, async(req, res)=> {
             method: 'POST',
             headers: {
                 'x-app-id': appId,
-                'x-app-key': apiWorkoutKey,
+                'x-app-key': apiCaloriesKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(jsonData)
