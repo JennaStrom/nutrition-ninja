@@ -22,7 +22,7 @@ As a person // I want to keep track of the food I eat and workouts I do // so I 
 ## Installation
 The project was uploaded to GitHub at the following repository: (https://github.com/JennaStrom/nutrition-ninja)
 
-You can access the deployed application with the Heroku link: 
+You can access the deployed application with the Heroku link: (https://hidden-lake-38607-a47be9049bc1.herokuapp.com/)
 
 To install the project follow these steps:
 
@@ -49,6 +49,14 @@ Nate Trask, (https://github.com/N8Trask)
 Nafbek Kebede, (https://github.com/Nafbek)
 
 Jenna Strom, (http://github.com/JennaStrom)
+
+Stock images from (http://stock.adobe.com)
+
+Workouts API (https://api-ninjas.com/api/exercises)
+
+Nutrition API (https://api-ninjas.com/api/nutrition)
+
+Calories API (https://trackapi.nutritionix.com/)
 
 ## Questions
   Click a link to find us on Github: [N8Trask](https://github.com/N8Trask),
