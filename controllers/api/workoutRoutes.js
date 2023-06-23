@@ -5,7 +5,7 @@ const axios = require('axios');
 const withAuth = require('../../utils/auth');
 
 const apiEndpoint = 'https://api.api-ninjas.com/v1/exercises';
-const apinewNinja = 'YnF77DgeIzx4abs3C/4mFw==V5wEdGttiBzNk6iO'
+const apinewNinja = process.env.WORKOUT_API_KEY;
 
 // GET route to render the workout form
 router.get('/', withAuth, (req, res) => {

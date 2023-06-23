@@ -282,4 +282,8 @@ width: fit-content;
     object-fit: cover;
     z-index: -1;
   }
+  #submitButton {
+    margin-left: 40%;
   
+
+  }
