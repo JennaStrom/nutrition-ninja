@@ -36,8 +36,17 @@ npm install
 npm start
 
 ## Usage
-  The first step to using our application is signing up for an account. Then you can search different fodos to find out their nutritional breakdown, see how many calories an exercise burns, or look up new workout ideas.   
-  
+  The first step to using our application is signing up for an account. Then you can search different fodos to find out their nutritional breakdown, see how many calories an exercise burns, or look up new workout ideas.  
+
+Some screenshots to show how the site works: 
+<img width="1421" alt="Screenshot 2023-06-22 at 7 34 26 PM" src="https://github.com/JennaStrom/nutrition-ninja/assets/123525191/4b85d546-b75d-478d-9642-704cc9928d83">
+
+<img width="1423" alt="Screenshot 2023-06-22 at 7 35 33 PM" src="https://github.com/JennaStrom/nutrition-ninja/assets/123525191/fc89af11-22a9-494c-a692-b8ceb876f018">
+
+<img width="1423" alt="Screenshot 2023-06-22 at 7 38 10 PM" src="https://github.com/JennaStrom/nutrition-ninja/assets/123525191/d76ff83f-ecf6-427b-a2ba-cf92d9269cd5">
+
+<img width="1440" alt="Screenshot 2023-06-22 at 7 39 43 PM" src="https://github.com/JennaStrom/nutrition-ninja/assets/123525191/d88299cd-f530-49f1-889a-5981f65f0e51">
+
 
 ## License
   This application is covered by the [The MIT License](https://opensource.org/license/mit/)
